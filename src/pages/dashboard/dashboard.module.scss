@@ -1,0 +1,63 @@
+.dashboard_main {
+  width: 100%;
+  margin: auto;
+  height: 1000px;
+  display: flex;
+}
+.content {
+  height: 2000px;
+  width: 83%;
+  margin-left: 1%;
+}
+.sidebarHinge {
+  width: 11%;
+  height: 100%;
+}
+
+.cartSection {
+  height: 100%;
+  width: 6.5%;
+  border-radius: 0 25px 25px 0;
+  background: #fff5ee;
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartHinge {
+  width: 8%;
+  margin-left: 15px;
+}
+
+.cartSectionImages {
+  height: 40px;
+  width: 40px;
+  margin: auto;
+}
+
+.cartIconAssets {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  margin-top: 60px;
+  cursor: pointer;
+  position: relative;
+}
+.cartCounter {
+  height: 30px;
+  width: 30px;
+  background: #2A160C;
+  border-radius: 50%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 25px;
+  top: 10px;
+}
+.totalCartItemCount {
+  color: white;
+  text-align: center;
+}
