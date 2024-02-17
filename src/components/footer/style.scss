@@ -1,0 +1,55 @@
+@import '../../styles/helpers.scss';
+
+.footer {
+  background-color: $footerBcgColor;
+  padding-top: 96px;
+  padding-bottom: 81px;
+  margin-top: auto;
+}
+
+.footer-menu{
+  @extend %for-flexJC;
+  padding-bottom: 29px;
+  margin-bottom: 57px;
+  border-bottom: 1px solid $borderBottomColor;
+}
+
+.contacts__social {
+  @extend %for-flex;
+}
+
+.contacts {
+  @extend %for-flexJC;
+}
+
+.footer-list__link {
+  @include Inter500(18px);
+  color: $textHeaderColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+.footer-list {
+  @extend %for-flex;
+}
+
+.footer-list__element {
+  margin-left: 70px;
+}
+
+.copyright {
+  color: #999999;
+  @include Inter500(17px);
+}
+
+.social__link {
+  margin-left: 53px;
+
+  &:hover svg path{
+    fill: $accentColor;
+    transition: 0.5s;
+  }
+}

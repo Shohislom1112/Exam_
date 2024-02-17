@@ -1,0 +1,172 @@
+@import '../../styles/helpers.scss';
+
+.dish-block {
+  @extend %border-bottom;
+}
+
+.dish__title {
+  text-align: center;
+  margin-bottom: 87px;
+}
+
+.dish-cards {
+  @extend %for-flexJC;
+  margin-bottom: 65px;
+}
+
+.dish__card {
+  width: 224.63px;
+  height: 390.36px;
+  box-shadow: 6.84841775894165px 82.18101501464844px 41.09050750732422px 0px #E5E5E5B2;
+  background-color: $cardColor;
+  border: 1.44px solid $cardBorder;
+  border-radius: 34.58px;
+  padding-top: 36px;
+  padding-left: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: 1s;
+
+  & article {
+    margin-left: 9px;
+    @extend %for-flexJC;
+    align-items: flex-end;
+  }
+
+  &:hover, &:focus {
+    transform: scale(1.1);
+  }
+}
+
+.dish-criteria {
+  @extend %for-flex;
+  @include Manrope400(17.34px);
+  color: $info;
+}
+
+.dish__name {
+  @include fontTitle(25.79px);
+  color: $addButton;
+}
+
+.dish__rating {
+  position: relative;
+  margin-left: 38px;
+  &::before {
+    content: " ";
+    background: url(./../restaurants/img/Star.svg) no-repeat;
+    position: absolute;
+    width: 25.79px;
+    height: 25.79px;
+    left: -32px;
+  }
+}
+
+.dish-typeBlock {
+  display: inline-block;
+  margin-left: 9px;
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+.dish__type {
+  @include font($titleFont, 400, 12.78px);
+  line-height: 19.16px;
+}
+
+.dish__image {
+  width: 184.91px;
+  height: 184.91px;
+  margin-bottom: 10px;
+}
+
+
+.dish-info {
+  margin-bottom: 13px;
+}
+
+.dish__price {
+  @include font($timeCard, 700, 25.94px);
+  & span {
+    font-size: 18.81px;
+    color: $info;
+  }
+}
+
+.dish-buy {
+  margin-top: 13px;
+  width: 174.18px;
+  @extend %for-flexJC;
+}
+
+.dish__button {
+  width: 43.83px;
+  height: 39.72px;
+  border-radius: 8.93px;
+  background: url("./img/plus.svg") no-repeat;
+  background-color: $addButton;
+  background-position: center;
+  transition: 0.5s;
+
+  &:hover, &:focus {
+    background-color: $accentColor;
+    transition: 0.5s;
+  }
+}
+
+.dish__viewButton {
+  @include fontBtn(20px);
+  color: $info;
+  float: right;
+  clear: left;
+  width: 112.8px;
+  margin-right: 20px;
+
+  & p {
+    position: relative;
+    right: 20px;
+  }
+  
+  & p::after {
+    content: " ";
+    background: url("../../img/arrow-grey.svg") no-repeat;
+    position: absolute;
+    width: 27.9px;
+    height: 27.9px;
+    top: -5px;
+    right: -20px;
+  }
+}
+
+.favorite-button {
+  position: absolute;
+  right: 0;
+  
+
+  & input {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    left: 1px;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  & input:checked + .favorite__image path {
+    fill: $accentColor;
+    transition: 0.5s;
+  }
+
+  & input:not(checked) + .favorite__image path {
+    fill: #DBD9EE;
+    transition: 0.5s;
+  }
+
+}
+
+.favorite__image {
+  position: relative;
+  left: -20px;
+}

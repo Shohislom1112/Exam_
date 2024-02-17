@@ -1,0 +1,63 @@
+@mixin font($family, $weight, $size) {
+  font: {
+    family: $family;
+    weight: $weight;
+    size: $size;
+  }
+}
+
+@mixin fontTitle($size) {
+  font: {
+    family: $titleFont;
+    weight: 600;
+    size: $size;
+  }
+}
+
+@mixin fontBtn($size) {
+  font: {
+    family: $titleFont;
+    weight: 500;
+    size: $size;
+  }
+}
+
+@mixin Inter500($size) {
+  font: {
+    family: $textFont;
+    weight: 500;
+    size: $size;
+  }
+}
+
+@mixin Inter400($size) {
+  font: {
+    family: $textFont;
+    weight:400;
+    size: $size;
+  }
+}
+
+@mixin Inter700($size) {
+  font: {
+    family: $textFont;
+    weight: 700;
+    size: $size;
+  }
+}
+
+@mixin Manrope400($size) {
+  font: {
+    family: $timeCard;
+    weight: 400;
+    size: $size;
+  }
+}
+
+@mixin Manrope700($size) {
+  font: {
+    family: $timeCard;
+    weight: 700;
+    size: $size;
+  }
+}

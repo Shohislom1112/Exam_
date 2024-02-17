@@ -1,0 +1,63 @@
+@import '../../styles/helpers.scss';
+
+.sale {
+  width: 100%;
+  position: relative;
+  display: block;
+  height: 280px;
+  padding-left: 66px;
+  background: url(./img/sale-bg.jpg) no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  margin-bottom: 216px;
+  padding-top: 37px;
+  &::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    width: 274.06px;
+    height: 100%;
+    background: url(./img/FoodImage.png) no-repeat;
+    background-size: 100%;
+    right: 72px;
+    top: 63px;
+  }
+}
+
+.sale-form {
+  width: 439.73px;
+  position: relative;
+}
+
+.sale__title {
+  @include font($titleFont, 800, 70px);
+  color: #FFFFFF;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.sale__input {
+  width: 100%;
+  height: 68px;
+  border-radius: 14.23px;
+  background-color: #FFFFFF;
+  opacity: 0.7;
+  border: none;
+  padding: 21.76px;
+  @include font($titleFont, 400, 16.27px);
+  color: #878787;
+}
+
+.sale__button {
+  position: absolute;
+  width: 132.37px;
+  height: 53.44px;
+  border-radius: 11.25px;
+  background-color: $accentColor;
+  color: #F7F8FA;
+  @include fontBtn(14.75px);
+  text-transform: uppercase;
+  right: 30px;
+  right: 6px;
+  top: 7px;
+}

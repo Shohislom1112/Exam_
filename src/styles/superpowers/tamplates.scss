@@ -1,0 +1,47 @@
+%for-flex {
+  display: flex;
+  align-items: center;
+}
+
+%for-flexJC {
+  @extend %for-flex;
+  justify-content: space-between;
+}
+
+
+%border-bottom {
+  padding-bottom: 120px;
+  margin-bottom: 100px;
+  border-bottom: 1px solid $borderBottomColor;
+}
+
+%activePurpleButton {
+  background-color: transparent;
+  color: $accentColor;
+}
+
+%activeWhiteButton  {
+  background-color: $accentColor;
+  color: #FFFFFF;
+}
+
+%sign {
+  display: none;
+  width: 1440px;
+  height: 1024px;
+  background-color: $cardColor;
+  z-index: 100;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 20px;
+  left: 0;
+  right: 0;
+  @extend %for-flexJC;
+}
+
+%sign-right {
+  width: 663px;
+  height: 100%;
+  background-color: $accentColor;
+}

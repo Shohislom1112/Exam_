@@ -1,0 +1,285 @@
+@import 'scss-reset/reset';
+@import './helpers.scss';
+@import './superpowers/fonts.scss';
+
+%for-flex {
+  display: flex;
+  align-items: center;
+}
+
+html,
+body {
+	min-height: 100vh;
+}
+
+#root, .App {
+	min-height: 100vh;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+}
+
+body {
+  background-color: $backgroundColor;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.banner {
+  @extend %for-flex;
+  justify-content: space-between;
+  margin-top: 90px;
+  margin-bottom: 130px;
+}
+
+.banner__subtitle {
+  @include fontTitle(15px);
+
+  color: #201F1F33;
+  letter-spacing: 2px;
+  display: inline-block;
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 18px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 54px;
+    height: 2px;
+    background-color: rgba(32, 31, 31, 0.2);
+  }
+}
+
+.banner-info {
+  flex: 0 0 44%;
+}
+
+.banner__text {
+  @include Inter400(18px);
+
+  color: #676767;
+  margin-bottom: 53px;
+
+  & span {
+    font-weight: 500;
+    color: $accentColor;
+  }
+}
+
+.banner-buttons {
+  @include fontBtn(16.27px);
+
+  margin-bottom: 33px;
+
+  .banner__button {
+    letter-spacing: 1%;
+    line-height: 24.41px;
+    border-radius: 12.41px;
+  }
+
+  .start {
+    width: 156px;
+    height: 59px;
+    background-color: $accentColor;
+    color: #FFFFFF;
+    line-height: 24.41px;
+    margin-right: 18px;
+    border: 1.5px solid $accentColor;
+    transition: 0.5s;
+
+    &:hover, &:focus {
+      @extend %activePurpleButton;
+      transition: 0.5s;
+    }
+  }
+
+  .pro {
+    width: 110px;
+    height: 59px;
+    border: 1.5px solid $accentColor;
+    color: $accentColor;
+    transition: 0.5s;
+
+    &:hover, &:focus {
+      @extend %activeWhiteButton;
+      transition: 0.5s;
+    }
+  }
+}
+
+.banner-rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating__trustpilot {
+  margin-right: 20px;
+}
+
+.rating__star {
+  margin-right: 4px;
+}
+
+.rating__score {
+  @include Inter500(16px);
+  color: #334155;
+  margin-left: 10px;
+}
+
+.statistics {
+  width: 100%;
+  height: 220.5px;
+  background-color: $accentColor;
+  padding: 55px 0;
+  position: relative;
+  margin-bottom: 103px;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    background: url(../img/decorStats.png), url(../img/decorStats.png) no-repeat;
+    background-position: 0, -80px;
+    background-size: cover;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    background: url(../img/decorStats2.png), url(../img/decorStats2.png) no-repeat;
+    background-position: 55px -6px, 0;
+    background-size: cover;
+    z-index: 2;
+    top: 1%;
+    right: 0%;
+    width: 8%;
+    height: 100%;
+  }
+}
+
+.statistics-info {
+  @extend %for-flex;
+  width: 975px;
+  margin: auto;
+
+  & article {
+    text-align: center;
+    padding: 0 66px;
+
+    &:nth-child(2) {
+      border: {
+         left: 1px solid #c5c5c582;
+         right: 1px solid #c5c5c582;
+      } 
+    }
+  }
+}
+
+.statistics__title {
+  @include font($statsTitle, 700, 43.2px);
+
+  color: $cardColor;
+  margin-bottom: 11px;
+}
+
+.statistics__text {
+  @include Inter500(14.4px);
+  color:#C5BFED;
+}
+
+.mobileVertion {
+  @extend %for-flex;
+  justify-content: space-between;
+  padding-bottom: 120px;
+  border-bottom: 1px solid $borderBottomColor;
+  margin-bottom: 100px;
+}
+
+.mobileVertion-info {
+  width: 560px;
+}
+
+.mobileVertion__title {
+  color: $headerColor;
+  margin-bottom: 63px;
+}
+
+.mobileVertion__list {
+  @include Inter400(20.33px);
+  color: $textBlock;
+  list-style-type: disc;
+  margin-bottom: 61px;
+  & li:first-child {
+    margin-bottom: 28px;
+  }
+
+}
+
+.mobileVertion__button {
+  width: 186px;
+  height: 63px;
+  background-color: $accentColor;
+  color: #FFFFFF;
+  position: relative;
+  line-height: 22.58px;
+  border-radius: 14.68px;
+  @include fontBtn(18.06px);
+  @extend %for-flex;
+  padding: 26px 20px;
+
+  p {
+    margin-right: 25px;
+  }
+
+  &::after {
+    content: " ";
+    background: url(../img/doubleArrow.svg) no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 154.49px;
+    right: -165px;
+    top: 45px;
+  }
+
+  transition: 0.5s;
+  border: 1.5px solid $accentColor;
+
+  &:hover, &:focus {
+    @extend %activePurpleButton;
+    transition: 0.5s;
+
+    svg path {
+      stroke: $accentColor;
+      transition: 0.5s;
+    }
+  }
+
+  
+}
+
+.title {
+  @include font($titleFont, 700, 53.38px);
+  & span {
+    color: $accentColor;
+  }
+  color: $headerColor;
+}
+
+.banner__title {
+  line-height: 90px;
+  letter-spacing: -3px;
+  margin-bottom: 16px;
+  font-size: 75px;
+}

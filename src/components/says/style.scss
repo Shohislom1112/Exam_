@@ -1,0 +1,100 @@
+@import '../../styles/helpers.scss';
+
+.says-block {
+  margin-bottom: 180px;
+}
+
+.says-card {
+  width: 528px;
+  height: auto;
+  background-color: $cardColor;
+  padding: 43px 38px;
+  border-radius: 20.12px;
+  box-shadow: 6.8484177589px -1.818985px 41.0905075073px 0px rgba(229, 229, 229, 0.6980392157);
+
+  
+  & .user {
+    display: none;
+    transition: all 2s ease 0s;
+  }
+}
+
+.active {
+  & .user {
+    transition: all 2s linear;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  & .user::after {
+    content: ' ';
+    position: absolute;
+    display: flex;
+    background: url(./img/saysIcon.svg) no-repeat;
+    background-size: 100%;
+    width: 58.69px;
+    height: 44.25px;
+    right: 0;
+  }
+
+  & .feedback__text {
+    color: $activeSays;
+  }
+}
+
+.says-block__title {
+  text-align: center;
+  margin-bottom: 87px;
+}
+
+.says-cards {
+  display: flex;
+}
+
+.says-cards {
+  & .swiper-pagination-bullet{
+    width: 222px;
+    height: 11px;   
+    border-radius: 10px;
+    margin: 0 !important;
+    background-color: $accentColor;
+    position: relative;
+    top: -3px;
+  }
+
+  & .swiper-pagination {
+    width: 667px;
+    height: 11px;
+    border-radius: 10px;
+    background-color: #DBD9EE;
+    left: 45%;
+    bottom: 10%;
+  }
+
+  & .swiper-wrapper {
+    height: 400px;
+  }
+}
+
+.user__avatar {
+  border-radius: 100%;
+  margin-right: 21px;
+}
+
+.user__name {
+  @include fontBtn(21px);
+}
+
+.user__date {
+  @include font(Quicksand, 500, 16.71px);
+  color: $dateSays;
+}
+
+.feedback__text {
+  @include font($titleFont, 400, 18px);
+  font-style: italic;
+  color: $nonactiveSays;
+  margin-bottom: 39px;
+}

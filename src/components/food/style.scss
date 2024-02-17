@@ -1,0 +1,110 @@
+@import '../../styles/helpers.scss';
+
+.plate {
+  margin-right: 9.5%;
+  max-width: 40%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 41.48px;
+    height: 24px;
+    right: -35%;
+    top: -8%;
+    background: url(./img/decor1.svg) top center no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 38.08px;
+    height: 33px;
+    bottom: -12%;
+    left: -27%;
+    background: url(./img/decor2.svg) top center no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+}
+
+
+.plate-food {
+  position: relative;
+  margin-top: 49px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3%;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    z-index: -1;
+    background: linear-gradient(137.31deg, #6C5FBC 4.83%, #5144A0 98.22%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12%;
+    right: -13%;
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+    background: url(./img/Arrow.svg) top center no-repeat;
+    background-size: cover;
+  }
+}
+
+.card-onTheWay {
+  width: 328.7px;
+  height: 89.45px;
+  border-radius: 16.41px;
+  background-color: $cardColor;
+  position: absolute;
+  box-shadow: -9.843755722045898px 12.304695129394531px 20.50782585144043px 0px #00000026;
+  padding: 5px 16px;
+  top: -10px;
+  right: -100px;
+  font-family: Poppins;
+  @extend %for-flexJC;
+}
+
+.card__info {
+  @extend %for-flex;
+  color: $headerColor;
+}
+
+.card__image {
+  width: 73.58px;
+  margin-right: 18px;
+}
+
+.card__title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.card__text {
+  font: {
+    size: 9.84px;
+    weight: 500;
+  }
+}
+
+.card__time {
+  color: #ACADB9;
+  line-height: 14.93px;
+  margin-top: 50px;
+  @include fontBtn(10.66px)
+}
+
+.card-stats {
+  position: absolute;
+  left: -25%;
+  top: 55%;
+}

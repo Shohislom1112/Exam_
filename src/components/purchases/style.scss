@@ -1,0 +1,167 @@
+@import '../../styles/helpers.scss';
+
+.purchases {
+  display: flex;
+  justify-content: space-between;
+  @extend %border-bottom;
+}
+
+.purchases__info-title {
+  margin-bottom: 48px;
+}
+
+.purchases-stats {
+  width: 534px;
+  height: 466.46px;
+  border-radius: 25.13px;
+  background-color: $cardColor;
+  border: 1.57px solid #EDF2F7;
+  box-shadow: 6.84841775894165px 82.18101501464844px 41.09050750732422px 0px #E5E5E5B2;
+  padding: 41px 45px;
+}
+
+.purchases-card-info {
+  @extend %for-flex;
+}
+
+.purchases-card {
+  width: 345.17px;
+  height: 88.3px;
+  border-radius: 12.04px;
+  background-color: $cardColor;
+  @extend %for-flexJC;
+  padding-left: 17px;
+  padding-right: 17px;
+  margin-bottom: 15px;
+  color: $addButton;
+}
+
+.purchases__image {
+  width: 72.24px;
+  height: 72.24px;
+  margin-right: 19px;
+}
+
+.purchases__time {
+  margin-top: 45px;
+  color: $info;
+  @include fontTitle(13.04px);
+}
+
+.purchases__title {
+  @include fontTitle(19.06px);
+}
+
+.purchases__text {
+  @include fontBtn(12.04px);
+}
+
+.purchases-stats-date {
+  @extend %for-flexJC;
+  margin-bottom: 38px;
+}
+
+.purchases__stats-title {
+  @include font($timeCard, 800, 28.27px);
+}
+
+.purchases__date {
+  display: block; 
+  width: 175.91px;
+  height: 53.4px;
+  @include font($timeCard, 600, 18.85px);
+  color: #1A202C;
+  border: none;
+  border-radius: 12.56px;
+  text-align: center;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url("./img/chevron-down.svg") no-repeat;
+  background-position: 95% 15px;
+  background-color: #FAFAFA;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.purchases-progress__card {
+  width: 458.61px;
+  height: 135.07px;
+  border: 1.57px solid #EDF2F7;
+  border-radius: 18.85px;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+
+.purchases-progress__info {
+  @extend %for-flexJC;
+  margin-bottom: 20px;
+
+  & div {
+    @extend %for-flex;
+  }
+}
+
+.purchases-expense-imageBlock,  .purchases-vocher-imageBlock{
+  width: 50.26px;
+  height: 50.26px;
+  border-radius: 100%;
+  background-color: #DBD9EE;
+  position: relative;
+  margin-right: 19px;
+
+  &::before {
+    content: "";
+    background: url("./img/wallet.svg") no-repeat;
+    width: 25.13px;
+    height: 25.13px;
+    margin: auto;
+  }
+}
+
+.purchases-vocher-imageBlock{
+  background-color: #F2FDF6;
+
+  &::before {
+    background: url("./img/money.svg") no-repeat;
+  }
+}
+
+.expense-bar, .vocher-bar {
+  width: 408.35px;
+  height: 9.42px;
+  border-radius: 78.53px;
+  background-color: #DBD9EE;
+
+  &::before {
+    content: " ";
+    width: 296.84px;
+    height: 9.42px;
+    border-radius: 78.53px;
+    background-color: $accentColor;
+    display: block;
+  }
+}
+
+.vocher-bar {
+  background-color: #FAF1DB;
+  &::before {
+    background-color: #FBAD18;
+  }
+}
+
+.purchases-progress__text {
+  & span {
+    color: #1A202C;
+    @include font($timeCard, 800, 18.85px);
+  }
+  letter-spacing: 0.63 px;
+  @include font($timeCard, 500, 15.71px);
+  color: $info;
+}
+
+.purchases-progress__price {
+  color: #1A202C;
+  @include font($timeCard, 800, 21.99px);
+}

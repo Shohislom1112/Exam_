@@ -1,0 +1,13 @@
+@import '../../styles/helpers.scss';
+
+.logo {
+  @extend %for-flex;
+  text-decoration: none;
+  margin-right: 100px;
+}
+
+.logo__title {
+  @include fontTitle(21.18px);
+  color: $accentColor;
+  margin-left: 11px;
+}

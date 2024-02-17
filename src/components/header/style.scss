@@ -1,0 +1,61 @@
+@import '../../styles/helpers.scss';
+
+.header-body {
+  padding: 30px 0px 25px;
+  border-bottom: 2px solid $borderBottomColor;
+  @extend %for-flexJC;
+}
+
+.header-navigation {
+  flex: 1 1 auto;
+}
+
+.header-list__link {
+  @include Inter500(18px);
+  color: $textHeaderColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+.header-list {
+  @extend %for-flex;
+}
+
+.header-list__element {
+  margin-right: 53px;
+}
+
+.header-buttons {
+  @include Inter700(18px);
+}
+
+.header__button {
+  font-weight: 700;
+  width: 102px;
+  height: 63px;
+}
+
+.auth {
+  margin-right: 9px;
+  color: $textHeaderColor;
+  &:hover, &:focus {
+    color: $accentColor;
+    transition: 0.5s;
+  }
+}
+
+.registr {
+  color: $backgroundColor;
+  background-color: $accentColor;
+  border-radius: 17.83px;
+  border: 1.5px solid $accentColor;
+  transition: 0.5s;
+
+  &:hover, &:focus {
+    @extend %activePurpleButton;
+    transition: 0.5s;
+  }
+}
